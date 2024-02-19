@@ -3,7 +3,9 @@ import Layout from "./Layout";
 import About from "./components/About";
 import PastExperience from "./components/PastExperience";
 import NavBar from "./components/NavBar";
-import Projects from "./components/Projects";
+import RandomQuote from "./components/RandomQuote";
+import Footer from "./components/Footer";
+import Projects from "./components/Projects/Index";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <About />
           <Projects />
           <PastExperience />
+          <RandomQuote />
+          <Footer />
         </>
       }
     />
