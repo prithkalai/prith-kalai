@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import DropDown from "./DropDown";
 
 const NavBar = () => {
-  // TODO: Create a dropdown menu
+  // TODO: Create a scroll effect to the respective section upon clicking
 
   const [visible, setVisible] = useState(true);
 
@@ -33,18 +33,18 @@ const NavBar = () => {
 
         <DropDown />
 
-        <div className="hidden lg:flex flex-row space-x-8 font-poppins font-medium text-md text-gray-500">
-          <a className="hover:text-yellow-400 transition-colors duration-300">
+        <div className="hidden md:flex flex-row space-x-8 font-poppins font-medium text-md text-gray-500">
+          <a className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
             About
           </a>
-          <a className="hover:text-yellow-400 transition-colors duration-300">
+          <a className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
             Projects
           </a>
-          <a className="hover:text-yellow-400 transition-colors duration-300">
+          <a className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
             My Experience
           </a>
-          <a className="text-blue-600 hover:text-yellow-400 transition-colors duration-300">
-            Schedule a meet with me
+          <a className="text-blue-600 hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+            Contact Me
           </a>
         </div>
       </nav>

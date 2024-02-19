@@ -48,7 +48,9 @@ const EducationTimeLine = () => {
                 {/* Dot */}
                 <div className="w-6 h-6 bg-yellow-300 rounded-full z-10  mr-6"></div>
                 <div className="bg-white text-start flex flex-col gap-[2px]">
-                  <h3 className="font-semibold text-2xl">{entry.degree}</h3>
+                  <h3 className="font-semibold text-xl sm:text-2xl">
+                    {entry.degree}
+                  </h3>
                   <p>{entry.institution}</p>
                   <p className="text-base font-medium">{entry.grade}</p>
                   <p className="text-sm text-gray-600">{entry.period}</p>
@@ -57,7 +59,7 @@ const EducationTimeLine = () => {
             ))}
           </div>
           {/* Timeline Line */}
-          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[310px] "></div>
+          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[300px] sm:h-[310px] "></div>
         </div>
       </div>
     </div>

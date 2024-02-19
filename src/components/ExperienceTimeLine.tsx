@@ -39,16 +39,20 @@ const ExperienceTimeLine = () => {
                 {/* Dot */}
                 <div className="w-6 h-6 bg-yellow-300 rounded-full z-10  mr-6"></div>
                 <div className="bg-white text-start flex flex-col">
-                  <h3 className="font-semibold text-2xl">{entry.role}</h3>
+                  <h3 className="font-semibold text-xl sm:text-2xl">
+                    {entry.role}
+                  </h3>
                   <p className="mb-3">{entry.company}</p>
-                  <p className="text-sm w-[450px] mb-2">{entry.description}</p>
+                  <p className="text-xs sm:text-sm w-[300px] sm:w-[450px] mb-2">
+                    {entry.description}
+                  </p>
                   <p className="text-sm text-gray-600">{entry.period}</p>
                 </div>
               </div>
             ))}
           </div>
           {/* Timeline Line */}
-          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[230px] "></div>
+          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[240px] sm:h-[230px] "></div>
         </div>
       </div>
     </div>

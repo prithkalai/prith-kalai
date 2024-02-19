@@ -1,18 +1,16 @@
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 
-//TODO: Design the dropdown
-
 const DropDown = () => {
   const [dropDown, setDropDown] = useState(false);
 
   const toggleDropdown = () => setDropDown(!dropDown);
   return (
-    <div className="relative lg:hidden font-poppins">
+    <div className="relative md:hidden font-poppins">
       {" "}
       {/* Make the parent div relative */}
       <button onClick={toggleDropdown} className="z-10">
-        <IoMenu />
+        <IoMenu className="hover:text-yellow-400 transition-colors duration-300" />
       </button>
       {dropDown && (
         <div
@@ -20,27 +18,31 @@ const DropDown = () => {
         >
           <a
             href="#about"
-            className="px-4 py-2 hover:text-yellow-400 transition-colors duration-300"
+            className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+            onClick={() => setDropDown(false)}
           >
             About
           </a>
           <a
             href="#projects"
-            className="px-4 py-2 hover:text-yellow-400 transition-colors duration-300"
+            className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+            onClick={() => setDropDown(false)}
           >
             Projects
           </a>
           <a
             href="#experience"
-            className="px-4 py-2 hover:text-yellow-400 transition-colors duration-300"
+            className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+            onClick={() => setDropDown(false)}
           >
             My Experience
           </a>
           <a
             href="#schedule"
-            className="px-4 py-2 text-blue-600 hover:text-yellow-400 transition-colors duration-300"
+            className="px-4 py-2 cursor-pointer text-blue-600 hover:text-yellow-400 transition-colors duration-300"
+            onClick={() => setDropDown(false)}
           >
-            Schedule a meet with me
+            Contact Me
           </a>
         </div>
       )}
