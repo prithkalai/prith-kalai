@@ -5,7 +5,6 @@ import LetterCarousel from "./LetterCarousel";
 import PortfolioImage from "./PortfolioImage";
 import WordCarousel from "./WordCarousel";
 
-// TODO: Configure the Resume Button (PDF Viewer)
 const About = () => {
   const handleLinkedIn = () => {
     window.open("https://www.linkedin.com/in/prithkalai/", "_blank");
@@ -13,6 +12,13 @@ const About = () => {
 
   const handleGitHub = () => {
     window.open("https://github.com/prithkalai", "_blank");
+  };
+
+  const handleResume = () => {
+    window.open(
+      "https://docs.google.com/document/d/12bxcr1Ki2jVT4J0bsRQrseDWqdkBTT6CUbK73YVitNw/edit?usp=sharing",
+      "_blank"
+    );
   };
 
   return (
@@ -31,7 +37,10 @@ const About = () => {
         </p>
 
         <div className="flex flex-row gap-4 ">
-          <button className="flex flex-row items-center gap-2 p-1 sm:p-2 border-2 hover:text-white active: border-yellow-400 hover:bg-yellow-400 transition-colors text-xs sm:text-sm rounded-2xl">
+          <button
+            className="flex flex-row items-center gap-2 p-1 sm:p-2 border-2 hover:text-white active: border-yellow-400 hover:bg-yellow-400 transition-colors text-xs sm:text-sm rounded-2xl"
+            onClick={handleResume}
+          >
             Resume
             <GrDocumentPdf className="text-md sm:text-lg " />
           </button>

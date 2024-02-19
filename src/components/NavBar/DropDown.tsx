@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 
 interface Props {
@@ -7,10 +7,38 @@ interface Props {
 
 const DropDown = ({ handleScroll }: Props) => {
   const [dropDown, setDropDown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => setDropDown(!dropDown);
+
+  //Close dropdown when clicking outside
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropDown(false);
+      }
+    };
+
+    // Close dropdown on scroll
+    const handleScroll = () => {
+      setDropDown(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="relative md:hidden font-poppins">
+    <div className="relative md:hidden font-poppins" ref={dropdownRef}>
       {" "}
       {/* Make the parent div relative */}
       <button onClick={toggleDropdown} className="z-10">
