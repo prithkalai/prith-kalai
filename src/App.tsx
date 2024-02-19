@@ -1,7 +1,7 @@
 import "./App.css";
 import Layout from "./Layout";
 import About from "./components/About";
-import Experience from "./components/Experience";
+import PastExperience from "./components/PastExperience";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 
@@ -13,7 +13,7 @@ function App() {
           <NavBar />
           <About />
           <Projects />
-          <Experience />
+          <PastExperience />
         </>
       }
     />

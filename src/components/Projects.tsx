@@ -37,11 +37,14 @@ const Projects = () => {
   ];
 
   return (
-    <div className="w-full h-fit mb-5">
-      <h1 className="font-poppins text-4xl w-fit mx-auto pt-2 mb-12">
+    <div className="w-full h-fit mb-20">
+      <h1 className="font-poppins text-4xl w-fit mx-auto pt-2 mb-1">
         Projects
       </h1>
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 w-full items-center justify-items-cente h-fit">
+      <p className="font-poppins text-sm w-fit mx-auto mb-7 text-gray-400">
+        Click on the projects to view them.
+      </p>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 w-full items-center justify-items-center h-fit">
         {projects.map((proj) => (
           <ProjectCard
             key={proj.id}
