@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import RandomQuote from "./components/RandomQuote";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects/Projects";
+import ContactMe from "./components/ContactMe/ContactMe";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Projects />
           <PastExperience />
           <RandomQuote />
+          <ContactMe />
           <Footer />
         </>
       }
