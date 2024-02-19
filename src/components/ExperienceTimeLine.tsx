@@ -12,14 +12,16 @@ const experienceHistory: ExperienceEntry[] = [
     role: "Software Engineer Intern",
     company: "IpserLab",
     period: "2023 - Present",
-    description: "",
+    description:
+      "Developed 10 responsive web pages and enhanced a landing page using React, boosting efficiency by 20%. I also streamlined the Node.js backend, cutting load times by 5%, and played a key role in a UI overhaul, demonstrating swift, impactful web development skills.",
   },
   {
     id: 2,
     role: "Machine Learning Intern",
     company: "Anna University",
     period: "2022",
-    description: "",
+    description:
+      "Crafted four CNN models, hitting an 85% accuracy peak, and tailored DeepInsight's architecture for a special use case, achieving a 95% tabular to image data conversion. Additionally, I improved team-management communication, streamlining decision-making and workflow.",
   },
 ];
 
@@ -36,16 +38,17 @@ const ExperienceTimeLine = () => {
               <div key={entry.id} className="flex flex-row items-start mb-12">
                 {/* Dot */}
                 <div className="w-6 h-6 bg-yellow-300 rounded-full z-10  mr-6"></div>
-                <div className="bg-white text-start">
+                <div className="bg-white text-start flex flex-col">
                   <h3 className="font-semibold text-2xl">{entry.role}</h3>
-                  <p>{entry.company}</p>
+                  <p className="mb-3">{entry.company}</p>
+                  <p className="text-sm w-[450px] mb-2">{entry.description}</p>
                   <p className="text-sm text-gray-600">{entry.period}</p>
                 </div>
               </div>
             ))}
           </div>
           {/* Timeline Line */}
-          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[120px] "></div>
+          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[230px] "></div>
         </div>
       </div>
     </div>
