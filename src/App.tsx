@@ -7,18 +7,29 @@ import RandomQuote from "./components/RandomQuote";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/ContactMe/ContactMe";
+import { useRef } from "react";
 
 function App() {
+  const projRef = useRef<HTMLDivElement>(null);
+  const expRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
   return (
     <Layout
       children={
         <>
-          <NavBar />
+          <NavBar
+            refs={{
+              ["projects"]: projRef,
+              ["myexp"]: expRef,
+              ["contact"]: contactRef,
+            }}
+          />
           <About />
-          <Projects />
-          <PastExperience />
+          <Projects projRef={projRef} />
+          <PastExperience expRef={expRef} />
           <RandomQuote />
-          <ContactMe />
+          <ContactMe contactRef={contactRef} />
           <Footer />
         </>
       }

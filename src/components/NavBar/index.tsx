@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import DropDown from "./DropDown";
 
-const NavBar = () => {
-  // TODO: Create a scroll effect to the respective section upon clicking
+interface NavBarProps {
+  refs: {
+    [key: string]: React.RefObject<HTMLDivElement>;
+  };
+}
 
+const NavBar = ({ refs }: NavBarProps) => {
   const [visible, setVisible] = useState(true);
 
   const lastScroll = useRef(0);
@@ -20,6 +24,11 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (sectionKey: string) => {
+    const sectionRef = refs[sectionKey];
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <nav
@@ -31,19 +40,28 @@ const NavBar = () => {
           Prithviraj Kalaiselvan
         </p>
 
-        <DropDown />
+        <DropDown handleScroll={scrollToSection} />
 
         <div className="hidden md:flex flex-row space-x-8 font-poppins font-medium text-md text-gray-500">
           <a className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
             About
           </a>
-          <a className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+          <a
+            className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
+            onClick={() => scrollToSection("projects")}
+          >
             Projects
           </a>
-          <a className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+          <a
+            className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
+            onClick={() => scrollToSection("myexp")}
+          >
             My Experience
           </a>
-          <a className="text-blue-600 hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+          <a
+            className="text-blue-600 hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
+            onClick={() => scrollToSection("contact")}
+          >
             Contact Me
           </a>
         </div>

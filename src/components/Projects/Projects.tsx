@@ -1,6 +1,10 @@
 import ProjectCard from "./ProjectCard";
 
-const Projects = () => {
+interface Props {
+  projRef: React.RefObject<HTMLDivElement>;
+}
+
+const Projects = ({ projRef }: Props) => {
   const projects = [
     {
       id: 1,
@@ -37,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="w-full h-fit mb-20">
+    <div className="w-full h-fit mb-20" ref={projRef}>
       <h1 className="font-poppins text-4xl w-fit mx-auto pt-2 mb-1">
         Projects
       </h1>
