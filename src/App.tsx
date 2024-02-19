@@ -5,7 +5,7 @@ import PastExperience from "./components/PastExperience";
 import NavBar from "./components/NavBar";
 import RandomQuote from "./components/RandomQuote";
 import Footer from "./components/Footer";
-import Projects from "./components/Projects/Index";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
