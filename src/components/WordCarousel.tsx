@@ -12,7 +12,7 @@ const WordCarousel: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((currentIndex) => (currentIndex + 1) % words.length);
-    }, 2000); // Change word every 3 seconds
+    }, 3000); // Change word every 3 seconds
 
     return () => clearInterval(intervalId);
   }, [words.length]);
