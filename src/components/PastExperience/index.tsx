@@ -7,7 +7,7 @@ interface PastExpProps {
 
 const PastExperience = ({ expRef }: PastExpProps) => {
   return (
-    <div className="w-full h-fit mb-3" ref={expRef}>
+    <div className="w-full h-fit mb-2" ref={expRef}>
       <div className="w-full  grid grid-cols-1 lg:grid-cols-2">
         {/* Experience Section */}
         <ExperienceTimeLine />

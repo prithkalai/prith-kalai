@@ -38,7 +38,7 @@ const DropDown = ({ handleScroll }: Props) => {
   }, []);
 
   return (
-    <div className="relative md:hidden font-poppins" ref={dropdownRef}>
+    <div className="relative lg:hidden font-poppins" ref={dropdownRef}>
       {" "}
       {/* Make the parent div relative */}
       <button onClick={toggleDropdown} className="z-10">
@@ -65,6 +65,15 @@ const DropDown = ({ handleScroll }: Props) => {
             }}
           >
             My Experience
+          </a>
+          <a
+            className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+            onClick={() => {
+              setDropDown(false);
+              handleScroll("tech");
+            }}
+          >
+            Tech Stack
           </a>
           <a
             className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"

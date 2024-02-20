@@ -205,7 +205,7 @@ const RandomQuote = () => {
       </p>
       <div className="w-full pl-4 pr-4">
         <div className="w-fit mx-auto p-4 shadow-md max-w-[610px] text-xs sm:text-sm text-center font-poppins rounded-xl">
-          {quote.content} <br /> -{quote.author}
+          {quote.content} <br /> - {quote.author}
         </div>
       </div>
     </div>
