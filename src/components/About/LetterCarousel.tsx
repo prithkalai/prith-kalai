@@ -31,7 +31,7 @@ const LetterCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden h-12 ml-2 text-5xl w-fit">
+    <div className="overflow-hidden h-12 ml-2 max-[402px]:text-4xl text-5xl w-fit">
       <div
         className={`absolute transition-all transform duration-1000 ${
           isVisible

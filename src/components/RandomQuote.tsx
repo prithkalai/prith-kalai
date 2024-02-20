@@ -197,7 +197,7 @@ const quotes: Quote[] = [
 ];
 
 const RandomQuote = () => {
-  const quote = quotes[Math.floor(Math.random() * 35)];
+  const quote = quotes[Math.floor(Math.random() * 33)];
   return (
     <div className="w-full h-fit mb-20">
       <p className="font-poppins font-medium text-lg sm:text-xl w-fit mx-auto pt-2 mb-3">

@@ -18,7 +18,7 @@ const WordCarousel: React.FC = () => {
   }, [words.length]);
 
   return (
-    <div className="relative overflow-hidden h-12 text-4xl mb-5">
+    <div className="relative overflow-hidden h-12 max-[340px]:text-[28px] max-[402px]:text-3xl text-4xl mb-5">
       {words.map((word, index) => (
         <div
           key={word}

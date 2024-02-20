@@ -4,7 +4,7 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="h-[100%] md:w-full xl:max-w-[1200px] xl:mx-auto">
+    <div className="h-fit md:w-full xl:max-w-[1200px] xl:mx-auto overflow-hidden">
       {children}
     </div>
   );

@@ -23,20 +23,20 @@ const About = () => {
 
   return (
     <div className="flex flex-col space-y-10 lg:flex-row mb-24  items-center justify-between w-full  h-fit pl-4 pr-4 ">
-      <div className="flex flex-col ml-8 font-poppins flex-shrink-0">
+      <div className="flex flex-col md:ml-8 font-poppins">
         <p className="text-sm mb-10">Welcome to my Porfolio Website!</p>
-        <div className=" flex flex-row text-5xl mb-3">
+        <div className=" flex flex-row  max-[402px]:text-4xl text-5xl max-[402px]:mb-1 mb-3">
           Hey Folks, Im
           <LetterCarousel />
         </div>
         <WordCarousel />
-        <p className="text-base w-[400px] sm:w-[500px] mb-7">
+        <p className="text-base  sm:w-[500px] mb-7">
           Energetic graduate student eager to solve real world problems and
           achieve better standards everyday. Dedicated to working hard to make
           positive contributions, on time.
         </p>
 
-        <div className="flex flex-row gap-4 ">
+        <div className="flex flex-row gap-4 justify-center sm:justify-start">
           <button
             className="flex flex-row items-center gap-2 p-1 sm:p-2 border-2 hover:text-white active: border-yellow-400 hover:bg-yellow-400 transition-colors text-xs sm:text-sm rounded-2xl"
             onClick={handleResume}
@@ -60,7 +60,9 @@ const About = () => {
           </button>
         </div>
       </div>
-      <PortfolioImage />
+      <div className="w-full flex flex-row justify-center lg:justify-end">
+        <PortfolioImage />
+      </div>
     </div>
   );
 };
