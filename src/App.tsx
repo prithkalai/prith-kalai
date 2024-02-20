@@ -10,6 +10,9 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import { useRef } from "react";
 import PersonalContent from "./components/PersonalContent";
 import TechStack from "./components/TechStack";
+import { inject } from "@vercel/analytics";
+
+inject();
 
 function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
