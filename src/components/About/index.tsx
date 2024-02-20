@@ -16,7 +16,7 @@ const About = () => {
 
   const handleResume = () => {
     window.open(
-      "https://docs.google.com/document/d/12bxcr1Ki2jVT4J0bsRQrseDWqdkBTT6CUbK73YVitNw/edit?usp=sharing",
+      "https://drive.google.com/file/d/1oRBum9r--oL5XEPJW7JV8WuIyqkZkj2M/view?usp=sharing",
       "_blank"
     );
   };
