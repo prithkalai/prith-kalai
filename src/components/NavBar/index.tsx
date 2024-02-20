@@ -43,9 +43,6 @@ const NavBar = ({ refs }: NavBarProps) => {
         <DropDown handleScroll={scrollToSection} />
 
         <div className="hidden md:flex flex-row space-x-8 font-poppins font-medium text-md text-gray-500">
-          <a className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
-            About
-          </a>
           <a
             className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
             onClick={() => scrollToSection("projects")}
@@ -57,6 +54,12 @@ const NavBar = ({ refs }: NavBarProps) => {
             onClick={() => scrollToSection("myexp")}
           >
             My Experience
+          </a>
+          <a
+            className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
+            onClick={() => scrollToSection("about")}
+          >
+            About
           </a>
           <a
             className="text-blue-600 hover:text-yellow-400 transition-colors duration-300 cursor-pointer"

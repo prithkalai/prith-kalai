@@ -49,14 +49,6 @@ const DropDown = ({ handleScroll }: Props) => {
           className={`absolute right-0 z-10 mt-2 w-48 bg-white shadow-md flex flex-col space-y-2 py-2`}
         >
           <a
-            href="#about"
-            className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
-            onClick={() => setDropDown(false)}
-          >
-            About
-          </a>
-          <a
-            href="#projects"
             className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
             onClick={() => {
               setDropDown(false);
@@ -66,7 +58,6 @@ const DropDown = ({ handleScroll }: Props) => {
             Projects
           </a>
           <a
-            href="#experience"
             className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
             onClick={() => {
               setDropDown(false);
@@ -76,7 +67,15 @@ const DropDown = ({ handleScroll }: Props) => {
             My Experience
           </a>
           <a
-            href="#schedule"
+            className="px-4 py-2 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+            onClick={() => {
+              setDropDown(false);
+              handleScroll("about");
+            }}
+          >
+            About
+          </a>
+          <a
             className="px-4 py-2 cursor-pointer text-blue-600 hover:text-yellow-400 transition-colors duration-300"
             onClick={() => {
               setDropDown(false);

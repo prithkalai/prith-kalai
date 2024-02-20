@@ -4,6 +4,8 @@ interface Props {
   projRef: React.RefObject<HTMLDivElement>;
 }
 
+// TODO: Add GIFs to display for projects instead of images
+
 const Projects = ({ projRef }: Props) => {
   const projects = [
     {
