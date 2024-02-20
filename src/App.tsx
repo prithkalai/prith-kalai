@@ -12,9 +12,8 @@ import PersonalContent from "./components/PersonalContent";
 import TechStack from "./components/TechStack";
 import { inject } from "@vercel/analytics";
 
-inject();
-
 function App() {
+  inject();
   const aboutRef = useRef<HTMLDivElement>(null);
   const projRef = useRef<HTMLDivElement>(null);
   const expRef = useRef<HTMLDivElement>(null);
