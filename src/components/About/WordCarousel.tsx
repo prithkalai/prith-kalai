@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const WordCarousel: React.FC = () => {
+interface Props {
+  handleVisibility: (isVisible: boolean) => void;
+}
+
+const WordCarousel = ({ handleVisibility }: Props) => {
   const words = [
     "Prithviraj Kalaiselvan",
     "CS Grad Student",
@@ -8,6 +12,14 @@ const WordCarousel: React.FC = () => {
     "Full-Stack Developer",
   ]; // Words to cycle through
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex == 0) {
+      handleVisibility(false);
+    } else {
+      handleVisibility(true);
+    }
+  }, [currentIndex]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {

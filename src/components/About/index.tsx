@@ -4,8 +4,10 @@ import { BsGithub } from "react-icons/bs";
 import LetterCarousel from "./LetterCarousel";
 import PortfolioImage from "./PortfolioImage";
 import WordCarousel from "./WordCarousel";
+import { useState } from "react";
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const handleLinkedIn = () => {
     window.open("https://www.linkedin.com/in/prithkalai/", "_blank");
   };
@@ -27,9 +29,9 @@ const About = () => {
         <p className="text-sm mb-10">Welcome to my Porfolio Website!</p>
         <div className=" flex flex-row  max-[402px]:text-4xl text-5xl max-[402px]:mb-1 mb-3">
           Hey Folks, Im
-          <LetterCarousel />
+          <LetterCarousel isVisible={isVisible} />
         </div>
-        <WordCarousel />
+        <WordCarousel handleVisibility={(val) => setIsVisible(val)} />
         <p className="text-base  sm:w-[500px] mb-7">
           Energetic graduate student eager to solve real world problems and
           achieve better standards everyday. Dedicated to working hard to make
