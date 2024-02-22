@@ -5,9 +5,9 @@ interface Props {
   Icon: ReactNode;
 }
 
-const TechImage = ({ name, Icon }: Props) => {
+const TechCard = ({ name, Icon }: Props) => {
   return (
-    <div className="w-fit h-[70px] flex justify-center items-center overflow-hidden ">
+    <div className="w-[150px] h-fit flex justify-start items-center overflow-visible ">
       {/* Adjusted the width and height to be the same for a square, or adjust as needed */}
       <div className="flex flex-row gap-2 place-items-center">
         <div className="text-4xl sm:text-5xl">{Icon}</div>
@@ -19,4 +19,4 @@ const TechImage = ({ name, Icon }: Props) => {
   );
 };
 
-export default TechImage;
+export default TechCard;

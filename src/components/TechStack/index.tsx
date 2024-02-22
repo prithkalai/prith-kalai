@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
 import { FaCss3Alt, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import { SiExpress, SiTailwindcss } from "react-icons/si";
-import TechImage from "./TechImage";
+import TechCard from "./TechCard";
 import { RiJavascriptFill } from "react-icons/ri";
 import { IoLogoHtml5 } from "react-icons/io5";
 
@@ -76,9 +76,9 @@ const TechStack = ({ techRef }: Props) => {
         Tech Stack
       </p>
       <div className="w-full flex h-fit justify-center">
-        <div className="w-[600px] grid grid-cols-2 bg-yellow-400 bg-opacity-80 rounded-xl justify-items-center mr-4 ml-4 pt-3 pb-3">
+        <div className="w-[600px] grid grid-cols-2 gap-y-6 bg-yellow-400 bg-opacity-80 rounded-xl justify-items-center items-center mr-4 ml-4 pt-7 pb-7">
           {tech.map((icon) => (
-            <TechImage key={icon.id} name={icon.name} Icon={icon.Icon} />
+            <TechCard key={icon.id} name={icon.name} Icon={icon.Icon} />
           ))}
         </div>
       </div>
