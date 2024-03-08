@@ -1,24 +1,42 @@
 //TODO: Perform Input Validation
-// TODO: Return form submission confirmation or failure to user (Toast Component)
 
 import { FormEvent, useRef } from "react";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import emailJS from "@emailjs/browser";
 
 export const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
+    const id = toast.loading("Sending Email", { theme: "colored" });
 
     if (formRef.current) {
       emailJS
         .sendForm("service_x6i55ad", "template_258sbtj", formRef.current, {
-          publicKey: "zp5qYAfMbSPbUy9Og",
+          publicKey: "zp5qYAfMbSPbUy9Ogx",
         })
         .then(
           () => {
+            toast.update(id, {
+              type: "success",
+              render: "Email Sent 👌",
+              isLoading: false,
+              hideProgressBar: false,
+              autoClose: 3000,
+              theme: "colored",
+            });
             console.log("SUCCESS!");
           },
           (error) => {
+            toast.update(id, {
+              type: "error",
+              render: "Error Sending Email 🤯",
+              isLoading: false,
+              hideProgressBar: false,
+              autoClose: 3000,
+              theme: "colored",
+            });
             console.log("FAILED...", error.text);
           }
         );
@@ -60,6 +78,19 @@ export const ContactForm = () => {
           </button>
         </div>
       </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="coloured"
+        transition={Bounce}
+      />
     </div>
   );
 };
