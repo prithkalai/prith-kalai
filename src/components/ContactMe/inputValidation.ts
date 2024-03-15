@@ -5,7 +5,10 @@ const inputSchema = z.object({
   name: z
     .string()
     .min(3, { message: "Name must be greater than 3 characters" })
-    .max(50),
+    .max(50)
+    .regex(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/, {
+      message: "Enter a Valid Name",
+    }),
   email: z.string().email({ message: "Enter a valid email" }),
   message: z
     .string()
@@ -25,3 +28,15 @@ export const validate = (data: { [k: string]: FormDataEntryValue }) => {
     return null;
   }
 };
+
+// Regex Supports the following characters
+
+// abcdefghijklmnopqrstwxyz
+// ABCDEFGHIJKLMNOPQRSTUVWXYZ
+// áéíóúäëïöüÄ'
+// 陳大文
+// łŁőŐűŰZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųū
+// ÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁ
+// ŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ.-
+// ñÑâê都道府県Федерации
+// আবাসযোগ্য জমির걸쳐 있는
