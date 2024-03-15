@@ -1,46 +1,24 @@
-//TODO: Perform Input Validation
-
 import { FormEvent, useRef } from "react";
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { Bounce, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import emailJS from "@emailjs/browser";
+import { sendMessage } from "./emailService";
+import { validate } from "./inputValidation";
 
 export const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const id = toast.loading("Sending Email", { theme: "colored" });
 
     if (formRef.current) {
-      emailJS
-        .sendForm("service_x6i55ad", "template_258sbtj", formRef.current, {
-          publicKey: "zp5qYAfMbSPbUy9Ogx",
-        })
-        .then(
-          () => {
-            toast.update(id, {
-              type: "success",
-              render: "Email Sent 👌",
-              isLoading: false,
-              hideProgressBar: false,
-              autoClose: 3000,
-              theme: "colored",
-            });
-            console.log("SUCCESS!");
-          },
-          (error) => {
-            toast.update(id, {
-              type: "error",
-              render: "Error Sending Email 🤯",
-              isLoading: false,
-              hideProgressBar: false,
-              autoClose: 3000,
-              theme: "colored",
-            });
-            console.log("FAILED...", error.text);
-          }
-        );
-      formRef.current.reset();
+      const data = Object.fromEntries(new FormData(formRef.current));
+
+      // Input Validation
+      const res = validate(data);
+      if (res) {
+        // Invoke Email Service
+        sendMessage(formRef);
+      }
     }
   };
 
@@ -60,7 +38,7 @@ export const ContactForm = () => {
         ></input>
         <label className="text-lg">Email</label>{" "}
         <input
-          type="email"
+          type="text"
           className="border-2 border-black mb-3 p-1 rounded-lg"
           placeholder="Enter Your Email ID"
           name="email"
@@ -79,7 +57,7 @@ export const ContactForm = () => {
         </div>
       </form>
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
