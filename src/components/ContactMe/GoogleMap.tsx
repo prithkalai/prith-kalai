@@ -2,8 +2,6 @@ import { BsGithub } from "react-icons/bs";
 import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { MdAttachEmail } from "react-icons/md";
 
-// FIXME: Use js-api-loader to load maps
-
 const GoogleMap = () => {
   const handleLinkedIn = () => {
     window.open("https://www.linkedin.com/in/prithkalai/", "_blank");
@@ -17,7 +15,7 @@ const GoogleMap = () => {
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49694.20447472277!2d-77.14335520012538!3d38.88080926213739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b69d7ba7a70f%3A0xf8cf6fc845f6b093!2sArlington%2C%20VA!5e0!3m2!1sen!2sus!4v1708374919561!5m2!1sen!2sus"
         className="flex w-[350px] h-[350px]  sm:w-[450px] sm:h-[450px]"
-        loading="lazy"
+        loading="eager"
         referrerPolicy="no-referrer-when-downgrade"
       />
       <div className="w-[350px] sm:w-[450px] h-fit bg-yellow-400 pl-10 pt-4 pb-4">

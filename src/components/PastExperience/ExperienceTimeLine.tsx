@@ -11,17 +11,17 @@ const experienceHistory: ExperienceEntry[] = [
     id: 1,
     role: "Software Engineer Intern",
     company: "IpserLab",
-    period: "2023 - Present",
+    period: "2023 - 2024 (11 Months)",
     description:
       "Developed 10 responsive web pages and enhanced a landing page using React, boosting efficiency by 20%. I also streamlined the Node.js backend, cutting load times by 5%, and played a key role in a UI overhaul, demonstrating swift, impactful web development skills.",
   },
   {
     id: 2,
-    role: "Machine Learning Intern",
-    company: "Anna University",
-    period: "2022",
+    role: "Junior Software Engineer",
+    company: "Great Line International LLC",
+    period: "2021 - 2022 (1 Year)",
     description:
-      "Crafted four CNN models, hitting an 85% accuracy peak, and tailored DeepInsight's architecture for a special use case, achieving a 95% tabular to image data conversion. Additionally, I improved team-management communication, streamlining decision-making and workflow.",
+      "Contributed to Great Line International's app, designed to streamline truck delivery operations, by developing server-side logic with Express.js and Node.js, enhancing MongoDB schema design, and optimizing API integration for faster load times. I also conducted API performance testing with Postman, resolving over 10 critical issues pre-deployment.",
   },
 ];
 
