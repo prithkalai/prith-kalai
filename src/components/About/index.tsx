@@ -20,7 +20,7 @@ const About = () => {
 
   const handleResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1oRBum9r--oL5XEPJW7JV8WuIyqkZkj2M/view?usp=sharing",
+      "https://drive.google.com/file/d/1MYH8dbgBEPkVZ8BXjFRyS6rZiRCcAHk8/view?usp=sharing",
       "_blank"
     );
   };

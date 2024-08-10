@@ -12,7 +12,7 @@ const educationHistory: EducationEntry[] = [
     id: 1,
     institution: "The George Washington University",
     degree: "MS, Computer Science",
-    period: "2022 - 2024",
+    period: "Aug 2022 - May 2024",
     description: "",
     grade: "3.85 / 4.0 GPA",
   },
@@ -22,16 +22,16 @@ const educationHistory: EducationEntry[] = [
     degree: "B.Tech, Information Technology",
     grade: "8.09 / 10 CGPA",
     description: "",
-    period: "2018 - 2022",
+    period: "Jun 2018 - Jun 2022",
   },
-  {
-    id: 3,
-    institution: "Maharishi International Residential School",
-    degree: "12th Grade - CBSE",
-    period: "2017 - 2018",
-    description: "",
-    grade: "",
-  },
+  // {
+  //   id: 3,
+  //   institution: "Maharishi International Residential School",
+  //   degree: "12th Grade - CBSE",
+  //   period: "2017 - 2018",
+  //   description: "",
+  //   grade: "",
+  // },
 ];
 
 const EducationTimeLine = () => {
@@ -59,7 +59,7 @@ const EducationTimeLine = () => {
             ))}
           </div>
           {/* Timeline Line */}
-          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[300px] sm:h-[310px] "></div>
+          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[150px] sm:h-[150px] "></div>
         </div>
       </div>
     </div>
