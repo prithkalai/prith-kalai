@@ -60,7 +60,7 @@ const ExperienceTimeLine = () => {
             ))}
           </div>
           {/* Timeline Line */}
-          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[240px] sm:h-[230px] "></div>
+          <div className=" absolute top-5 left-[10px] w-1 border-2 border-black h-[435px] sm:h-[445px] "></div>
         </div>
       </div>
     </div>
