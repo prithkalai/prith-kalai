@@ -11,15 +11,23 @@ const experienceHistory: ExperienceEntry[] = [
     id: 1,
     role: "Software Engineer Intern",
     company: "IpserLab",
-    period: "Jun 2023 - March 2024 (11 Months)",
+    period: "June 2023 - March 2024 (10 Months)",
     description:
       "Developed 10 responsive web pages and enhanced a landing page using React, boosting efficiency by 20%. I also streamlined the Node.js backend, cutting load times by 5%, and played a key role in a UI overhaul, demonstrating swift, impactful web development skills.",
   },
   {
     id: 2,
+    role: "Software Engineer - HR",
+    company: "Tiaano",
+    period: "July 2021 - July 2022 (1 Yr 1 Month)",
+    description:
+      "Aided in migrating the HR system of 50+ employees from on-premises servers to AWS Cloud. Enabled a cost reduction of 80% compared to on-premise solution.",
+  },
+  {
+    id: 3,
     role: "Junior Software Engineer",
     company: "Great Line International LLC",
-    period: "Mar 2021 - June 2022 (4 Months)",
+    period: "March 2021 - June 2022 (4 Months)",
     description:
       "Contributed to Great Line International's app, designed to streamline truck delivery operations, by developing server-side logic with Express.js and Node.js, enhancing MongoDB schema design, and optimizing API integration for faster load times. I also conducted API performance testing with Postman, resolving over 10 critical issues pre-deployment.",
   },
