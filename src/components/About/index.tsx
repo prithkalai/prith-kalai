@@ -47,9 +47,9 @@ const About = () => {
         </div>
         <WordCarousel handleVisibility={(val) => setIsVisible(val)} />
         <p className="text-base  sm:w-[500px] mb-7 ">
-          Energetic graduate student eager to solve real world problems and
-          achieve better standards everyday. Dedicated to working hard to make
-          positive contributions, on time.
+          An energetic graduate eager to solve real world problems and achieve
+          better standards everyday. Dedicated to working hard to make positive
+          contributions, on time.
         </p>
 
         <div className="flex flex-row gap-4 justify-center sm:justify-start">

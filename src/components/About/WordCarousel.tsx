@@ -7,14 +7,15 @@ interface Props {
 const WordCarousel = ({ handleVisibility }: Props) => {
   const words = [
     "Prithviraj Kalaiselvan",
-    "CS Grad Student",
+    "CS Graduate (MS)",
+    "AWS Certified (SAA)",
     "Front-End Developer",
     "Full-Stack Developer",
   ]; // Words to cycle through
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (currentIndex == 0) {
+    if (currentIndex == 0 || currentIndex == 2) {
       handleVisibility(false);
     } else {
       handleVisibility(true);
